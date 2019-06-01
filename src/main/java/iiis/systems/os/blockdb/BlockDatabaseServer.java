@@ -41,6 +41,7 @@ public class BlockDatabaseServer {
 
     public static void main(String[] args) throws IOException, JSONException, InterruptedException {
         JSONObject config = Util.readJsonFile("config.json");
+		//Util.writeJsonFile("config.json.out",config);
         config = (JSONObject)config.get("1");
         String address = config.getString("ip");
         int port = Integer.parseInt(config.getString("port"));
